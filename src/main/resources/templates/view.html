@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>View</title>
+</head>
+<body>
+<h1>Book list</h1>
+<form th:action="@{/view}" method="get">
+    <p>Id: <input type="id" th:name="id"/></p>
+    <p><input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
+    </p>
+</form>
+
+<br>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>ISBN</th>
+        <th>AUTHOR</th>
+    </tr>
+
+    <tr>
+        <td th:text="${book.id}">id</td>
+        <td th:text="${book.title}">title</td>
+        <td th:text="${book.isbn}">isbn</td>
+        <td th:text="${book.author}">author</td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Thymeleaf example</title>
+</head>
+<body>
+<h1>Car List</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>ISBN</th>
+        <th>AUTHOR</th>
+        <th>AUTHOR</th>
+    </tr>
+    <tr th:each="car:${cars}">
+        <td th:text="${car.id}">id</td>
+        <td th:text="${car.name}">name</td>
+        <td th:text="${car.color}">color</td>
+        <td th:text="${car.year}">year</td>
+    </tr>
+</table>
+</body>
+</html>
